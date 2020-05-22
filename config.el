@@ -26,6 +26,9 @@
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-dracula)
 
+(custom-set-faces!
+  '(ivy-minibuffer-match-face-1 :foreground "#aaaaaa"))
+
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
@@ -71,3 +74,6 @@
 
 ;; PHP
 (add-to-list '+format-on-save-enabled-modes 'php-mode t)
+
+;; Associate .leex (Elixir LiveView) with web-mode
+(add-to-list 'auto-mode-alist '("\\.leex\\'" . web-mode))
